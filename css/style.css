@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Arvo');
 @import url('https://fonts.googleapis.com/css?family=Pacifico');
 html, body {
-  background-color: cyan;
+  background-color: #444;
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -59,7 +59,7 @@ Without covering layers behind it, uneven layers would appear out of place. Can 
   top: 100%;
   left: 0;
   right: 0;
-  height: 59vw;
+  height: 61vw;
   width: 100%;
   z-index: 2;
   margin: auto;
