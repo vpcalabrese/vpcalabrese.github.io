@@ -61,7 +61,7 @@ Without covering layers behind it, uneven layers would appear out of place. Can 
   right: 0;
   height: 59vw;
   width: 100%;
-  z-index: 2;
+  z-index: 10000;
   margin: auto;
   text-align: center;
   /* Unitless line height because child elements will
