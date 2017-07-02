@@ -70,7 +70,6 @@ Without covering layers behind it, uneven layers would appear out of place. Can 
   than inheriting an arbitrary value from a parent that is more likely to need overriding.
   More found at https://css-tricks.com/almanac/properties/l/line-height */
   line-height: 2.5;
-  -webkit-transform: translateZ(0);
 }
 
 #about p {
@@ -168,19 +167,16 @@ i {
 .parallax__layer__0 {
   -webkit-transform: translateZ(-250px) scale(3.5);
   transform: translateZ(-250px) scale(3.5);
-  -webkit-transform: translate3d(0, 0, 0);
 }
 
 .parallax__layer__1 {
   -webkit-transform: translateZ(-200px) scale(3);
   transform: translateZ(-200px) scale(3);
-  -webkit-transform: translate3d(0, 0, 0);
 }
 
 .parallax__layer__2 {
   -webkit-transform: translateZ(-150px) scale(2.5);
   transform: translateZ(-150px) scale(2.5);
-  -webkit-transform: translate3d(0, 0, 0);
   /* opacity lower so intro text (.name and .purpose) is more readable for viewer */
   opacity: .9;
 }
@@ -188,19 +184,16 @@ i {
 .parallax__layer__3 {
   -webkit-transform: translateZ(-100px) scale(2);
   transform: translateZ(-100px) scale(2);
-  -webkit-transform: translate3d(0, 0, 0);
 }
 
 .parallax__layer__4 {
   -webkit-transform: translateZ(-50px) scale(1.5);
   transform: translateZ(-50px) scale(1.5);
-  -webkit-transform: translate3d(0, 0, 0);
 }
 
 .parallax__layer__5 {
   -webkit-transform: translateZ(0px) scale(1);
   transform: translateZ(0px) scale(1);
-  -webkit-transform: translate3d(0, 0, 0);
 }
 
 
