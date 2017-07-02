@@ -6,3 +6,11 @@ $(document).ready(function () {
   }, 3000);
 
 });
+
+$(function () { // this replaces document.ready
+  $(window).on('load', function () {
+    $('body').addClass('slow', function () {
+      $(this).remove();
+    });
+  });
+});
