@@ -201,6 +201,17 @@
   <script src="http://code.jquery.com/jquery-latest.js"></script>
   <script src="js/main.js"></script>
   <script src="js/nav.js"></script>
+  <script>
+  /* Triggers loading animations so it leaves to viewport */
+  $(document).ready(function () {
+
+    setTimeout(function () {
+      $('body').addClass('loaded');
+    }, 3000);
+
+  });
+
+  </script>
 
 
 
