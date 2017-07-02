@@ -7,8 +7,6 @@ $(document).ready(function () {
 
 });
 
-$(function () { // this replaces document.ready
-  $(window).on('load', function () {
-    $('body').addClass('loaded');
-  }, 3000);
+$(document).ready(function () {
+  console.log('ready!');
 });
