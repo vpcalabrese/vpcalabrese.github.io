@@ -61,7 +61,7 @@ Without covering layers behind it, uneven layers would appear out of place. Can 
   right: 0;
   height: 59vw;
   width: 100%;
-  z-index: 10000;
+  z-index: 2;
   margin: auto;
   text-align: center;
   /* Unitless line height because child elements will
@@ -70,6 +70,7 @@ Without covering layers behind it, uneven layers would appear out of place. Can 
   than inheriting an arbitrary value from a parent that is more likely to need overriding.
   More found at https://css-tricks.com/almanac/properties/l/line-height */
   line-height: 2.5;
+  -webkit-transform: translate3d(0, 0, 0);
 }
 
 #about p {
