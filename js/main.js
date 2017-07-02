@@ -9,8 +9,6 @@ $(document).ready(function () {
 
 $(function () { // this replaces document.ready
   $(window).on('load', function () {
-    $('body').addClass('slow', function () {
-      $(this).remove();
-    });
-  });
+    $('body').addClass('loaded');
+  }, 3000);
 });
