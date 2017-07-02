@@ -1,0 +1,584 @@
+@import url('https://fonts.googleapis.com/css?family=Arvo');
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+html, body {
+  background-color: cyan;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+h1 {
+  font-family: 'Pacifico', sans-serif;
+  font-size: 2.5vw;
+}
+
+
+/* -- parallax scrolling Intro -- */
+
+.parallax {
+  -webkit-perspective: 100px;
+  perspective: 100px;
+  height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+}
+
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.parallax__layer img {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 0 auto;
+}
+
+
+/* Cover layer in place so when user scrolls up, there is a transition into a div element that covers the layers behind it.
+Without covering layers behind it, uneven layers would appear out of place. Can test this by removing cover layer. - */
+
+.parallax__cover {
+  background: #000;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 59vw;
+  width: 100%;
+  z-index: 2;
+  margin: auto;
+  text-align: center;
+  /* Unitless line height because child elements will
+  inherit the raw number value, rather than the computed value. With this, child
+  elements can compute their line heights based on their computed font size, rather
+  than inheriting an arbitrary value from a parent that is more likely to need overriding.
+  More found at https://css-tricks.com/almanac/properties/l/line-height */
+  line-height: 2.5;
+}
+
+#about p {
+  font-family: 'Arvo', sans-serif;
+  margin: 0 6% 3% 6%;
+  font-size: 1.5vw;
+  text-align: left;
+  text-indent: 6%;
+  color: #D5D5C5;
+}
+
+#about h1 {
+  padding-top: 6%;
+  color: #D5D5C5;
+}
+
+.btn-container {
+  margin-top: 3%;
+  margin-bottom: 12%;
+}
+
+.btn {
+  margin: auto;
+  text-align: center;
+  font-size: 1.5vw;
+  text-decoration: none;
+  width: 20vw;
+  height: 4vw;
+  border: 2px solid #D5D5C5;
+  font-family: 'Arvo', sans-serif;
+  border-radius: 50px;
+  color: #D5D5C5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.btn:hover {
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+i {
+  padding-right: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.name {
+  color: #222;
+  -webkit-transform: translateZ(-230px) scale(1);
+  /* Moves name just above layer0 in the parallax stack */
+  transform: translateZ(-230px) scale(1);
+  /* Next two lines moves name down from top and rotates it in line with mountains */
+  top: 50%;
+  -webkit-transform: translateY(175%) rotate(-2deg);
+      -ms-transform: translateY(175%) rotate(-2deg);
+          transform: translateY(175%) rotate(-2deg);
+  font-size: 8vw;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Pacifico', cursive;
+}
+
+.purpose {
+  color: #D5D5C5;
+  /* Moves name just above layer0 in the parallax stack */
+  -webkit-transform: translateZ(-230px) scale(1);
+  transform: translateZ(-230px) scale(1);
+  /* Next two lines moves name down from top and rotates it in line with mountains */
+  top: 50%;
+  -webkit-transform: translateY(600%) rotate(-2deg);
+      -ms-transform: translateY(600%) rotate(-2deg);
+          transform: translateY(600%) rotate(-2deg);
+  font-size: 3vw;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Arvo', cursive;
+}
+
+
+/* Stacking the parallax layers, scroll speed determined by combination of z and scale */
+
+.parallax__layer__0 {
+  -webkit-transform: translateZ(-250px) scale(3.5);
+  transform: translateZ(-250px) scale(3.5);
+}
+
+.parallax__layer__1 {
+  -webkit-transform: translateZ(-200px) scale(3);
+  transform: translateZ(-200px) scale(3);
+}
+
+.parallax__layer__2 {
+  -webkit-transform: translateZ(-150px) scale(2.5);
+  transform: translateZ(-150px) scale(2.5);
+  /* opacity lower so intro text (.name and .purpose) is more readable for viewer */
+  opacity: .9;
+}
+
+.parallax__layer__3 {
+  -webkit-transform: translateZ(-100px) scale(2);
+  transform: translateZ(-100px) scale(2);
+}
+
+.parallax__layer__4 {
+  -webkit-transform: translateZ(-50px) scale(1.5);
+  transform: translateZ(-50px) scale(1.5);
+}
+
+.parallax__layer__5 {
+  -webkit-transform: translateZ(0px) scale(1);
+  transform: translateZ(0px) scale(1);
+}
+
+
+/* nav styling */
+
+nav {
+  z-index: 10000;
+  top: 0;
+  left: 0;
+  margin: 0 auto;
+  overflow: hidden;
+  width: 100vw;
+  height: 4vw;
+  position: fixed;
+  color: #D5D5C5;
+  text-align: center;
+  background-color: rgba(34, 34, 34, .98);
+}
+
+.nav-table {
+  display: table;
+  margin: 0 auto;
+  font-size: 1vw;
+  font-family: 'Arvo', sans-serif;
+}
+
+.nav-cell {
+  display: table-cell;
+  text-transform: uppercase;
+  vertical-align: middle;
+  width: 10vw;
+  margin: 0;
+}
+
+.nav-cell a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  -webkit-transform: translateY(-8%);
+      -ms-transform: translateY(-8%);
+          transform: translateY(-8%);
+}
+
+.nav-logo {
+  font-family: 'Pacifico', sans-serif;
+  font-size: 3vw;
+  text-transform: uppercase;
+  font-size: 2.5vw;
+  -webkit-transform: rotate(-2deg);
+      -ms-transform: rotate(-2deg);
+          transform: rotate(-2deg);
+}
+
+@-webkit-keyframes slideInFromTop {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromTop {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+.nav-animation {
+  /* This section calls the slideInFromLeft animation we defined above */
+  -webkit-animation: 3s ease-out 0s 6s slideInFromTop;
+          animation: 3s ease-out 0s 6s slideInFromTop;
+}
+
+#loader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 20000;
+}
+
+#loader {
+  display: block;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #c9d98d;
+  -webkit-animation: spin 2s linear infinite;
+  /* Chrome, Opera 15+, Safari 5+ */
+  animation: spin 2s linear infinite;
+  /* Chrome, Firefox 16+, IE 10+, Opera */
+  z-index: 20001;
+}
+
+#loader:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #53856e;
+  -webkit-animation: spin 3s linear infinite;
+  /* Chrome, Opera 15+, Safari 5+ */
+  animation: spin 3s linear infinite;
+  /* Chrome, Firefox 16+, IE 10+, Opera */
+}
+
+#loader:after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #204f4e;
+  -webkit-animation: spin 1.5s linear infinite;
+  /* Chrome, Opera 15+, Safari 5+ */
+  animation: spin 1.5s linear infinite;
+  /* Chrome, Firefox 16+, IE 10+, Opera */
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: rotate(0deg);
+    /* IE 9 */
+    transform: rotate(0deg);
+    /* Firefox 16+, IE 10+, Opera */
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: rotate(360deg);
+    /* IE 9 */
+    transform: rotate(360deg);
+    /* Firefox 16+, IE 10+, Opera */
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: rotate(0deg);
+    /* IE 9 */
+    transform: rotate(0deg);
+    /* Firefox 16+, IE 10+, Opera */
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: rotate(360deg);
+    /* IE 9 */
+    transform: rotate(360deg);
+    /* Firefox 16+, IE 10+, Opera */
+  }
+}
+
+#loader-wrapper .loader-section {
+  position: fixed;
+  top: 0;
+  width: 51%;
+  height: 100%;
+  background: #222222;
+  z-index: 1000;
+  -webkit-transform: translateX(0);
+  /* Chrome, Opera 15+, Safari 3.1+ */
+  -ms-transform: translateX(0);
+  /* IE 9 */
+  transform: translateX(0);
+  /* Firefox 16+, IE 10+, Opera */
+}
+
+#loader-wrapper .loader-section.section-left {
+  left: 0;
+}
+
+#loader-wrapper .loader-section.section-right {
+  right: 0;
+}
+
+
+/* Loaded */
+
+.loaded #loader-wrapper .loader-section.section-left {
+  -webkit-transform: translateX(-100%);
+  /* Chrome, Opera 15+, Safari 3.1+ */
+  -ms-transform: translateX(-100%);
+  /* IE 9 */
+  transform: translateX(-100%);
+  /* Firefox 16+, IE 10+, Opera */
+  -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+  -o-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+  transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+}
+
+.loaded #loader-wrapper .loader-section.section-right {
+  -webkit-transform: translateX(100%);
+  /* Chrome, Opera 15+, Safari 3.1+ */
+  -ms-transform: translateX(100%);
+  /* IE 9 */
+  transform: translateX(100%);
+  /* Firefox 16+, IE 10+, Opera */
+  -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+  -o-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+  transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+}
+
+.loaded #loader {
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.loaded #loader-wrapper {
+  visibility: hidden;
+  -webkit-transform: translateY(-100%);
+  /* Chrome, Opera 15+, Safari 3.1+ */
+  -ms-transform: translateY(-100%);
+  /* IE 9 */
+  transform: translateY(-100%);
+  /* Firefox 16+, IE 10+, Opera */
+  -webkit-transition: all 0.3s 1s ease-out;
+  -o-transition: all 0.3s 1s ease-out;
+  transition: all 0.3s 1s ease-out;
+}
+
+
+/* JavaScript Turned Off */
+
+.no-js #loader-wrapper {
+  display: none;
+}
+
+
+
+.skills {
+  background-color: white;
+  color: black;
+  font-family: 'Arvo', sans-serif;
+  display: block;
+  padding: 3% 6% 6% 6%;
+}
+
+.skills-container {
+  width: 100%;
+  background-color: #ddd;
+}
+
+.bar {
+  text-align: right;
+  padding: .05vw 1vw .05vw 0;
+  color: white;
+}
+
+.skills p {
+  text-align: left;
+}
+
+.html {
+  width: 90%;
+  background-color: #204f42;
+}
+
+.css {
+  width: 70%;
+  background-color: #222;
+}
+
+.js {
+  width: 25%;
+  background-color: #204f42;
+}
+
+.php {
+  width: 35%;
+  background-color: #222;
+}
+
+.photoshop {
+  width: 90%;
+  background-color: #204f42;
+}
+
+.illustrator {
+  width: 70%;
+  background-color: #222;
+}
+
+.sql {
+  width: 60%;
+  background-color: #204f42;
+}
+
+.java {
+  width: 75%;
+  background-color: #222;
+}
+
+#projects {
+  background-color: #444;
+  color: white;
+  font-family: 'Arvo', sans-serif;
+  padding: 3% 6% 6% 6%;
+  font-size: inherit;
+}
+
+.image-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-link {
+  display: inline-block;
+  margin-bottom: 8px;
+  width: calc(50% - 4px);
+  margin-right: 8px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.flex-link:nth-of-type(2n) {
+  margin-right: 0;
+}
+
+@media screen and (min-width: 50em) {
+  .flex-link {
+    width: calc(25% - 6px);
+  }
+
+  .flex-link:nth-of-type(2n) {
+    margin-right: 8px;
+  }
+
+  .flex-link:nth-of-type(4n) {
+    margin-right: 0;
+  }
+}
+
+.flex-link:hover img {
+  transform: scale(1.15);
+}
+
+figure {
+  margin: 0;
+  overflow: hidden;
+}
+
+figcaption {
+  margin: 15px;
+  text-align: left;
+}
+
+.image-grid img {
+  border: none;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  background: #ccc;
+  transition: transform .2s ease-in-out;
+}
+
+.project-title {
+  font-size: 1em;
+  color: #c9d98d;
+  margin: 0;
+}
