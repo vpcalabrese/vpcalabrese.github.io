@@ -9,6 +9,14 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <!--- Many users already have downloaded jQuery from Google or Microsoft when
+  visiting another site. As a result, it will be loaded from cache when they
+  visit your site, which leads to faster loading time. Also, most CDN's will
+  make sure that once a user requests a file from it, it will be served from
+  the server closest to them, which also leads to faster loading time. -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 </head>
 
 
@@ -25,13 +33,14 @@
       <div class="nav-table">
         <div class="nav-cell"><a href="#about">About Me</a></div>
         <div class="nav-cell"><a href="#projects">Projects</a></div>
-        <div class="nav-cell nav-logo"><a href="#top">VC</a></div>
+        <div class="nav-cell nav-logo"><a href="#top" id="top">VC</a></div>
         <div class="nav-cell"><a href="#">Other</a></div>
-        <div class="nav-cell"><a href="#">Contact</a></div>
+        <div class="nav-cell"><a href="#contact">Contact</a></div>
         </ul>
       </div>
     </nav>
   </header>
+
   <div class="parallax">
     <div class="parallax__layer parallax__layer__0">
       <img src="images/layer0.png" alt="no" />
@@ -190,6 +199,12 @@
       </a>
     </div>
 
+  </section>
+
+  <section id="contact">
+    <h1>Conact Me</h1>
+    <div>vincentcalabrese.ux@gmail.com | <a href="https://www.linkedin.com/in/vpcalabrese" alt="" target="_blank">https://www.linkedin.com/in/vpcalabrese</a>
+    </div>
   </section>
 
 

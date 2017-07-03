@@ -5,8 +5,8 @@ $(document).ready(function () {
     $('body').addClass('loaded');
   }, 3000);
 
-});
+  $('#top').click(function () {
+      $('body').scrollTop(0);
+    });
 
-$(document).ready(function () {
-  console.log('ready!');
 });

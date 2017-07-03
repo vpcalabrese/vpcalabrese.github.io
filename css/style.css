@@ -593,3 +593,27 @@ figcaption {
   color: #c9d98d;
   margin: 0;
 }
+
+#contact {
+  background-color: #d3d3d3;
+  display: block;
+  text-align: center;
+  color: black;
+  padding: 3% 6% 6% 6%;
+  font-size: inherit;
+}
+
+#contact div {
+  font-family: 'Arvo', sans-serif;
+  font-size: 1.8vw;
+  color: black;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+}
+
+#contact a {
+  text-decoration: none;
+  color: inherit;
+}
