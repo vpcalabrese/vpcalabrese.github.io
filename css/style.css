@@ -653,9 +653,9 @@ figcaption {
     -webkit-transform: translateZ(-230px) scale(1);
     transform: translateZ(-230px) scale(1);
     /* Next two lines moves name down from top and rotates it in line with mountains */
-    -webkit-transform: translateY(1450%) rotate(-2deg);
-        -ms-transform: translateY(1450%) rotate(-2deg);
-            transform: translateY(1450%) rotate(-2deg);
+    -webkit-transform: translateY(1250%) rotate(-2deg);
+        -ms-transform: translateY(1250%) rotate(-2deg);
+            transform: translateY(1250%) rotate(-2deg);
     font-size: 4.5vw;
   }
     .parallax__cover {
