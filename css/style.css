@@ -243,7 +243,6 @@ nav {
   font-family: 'Pacifico', sans-serif;
   font-size: 3vw;
   text-transform: uppercase;
-  font-size: 2.5vw;
   -webkit-transform: rotate(-2deg);
       -ms-transform: rotate(-2deg);
           transform: rotate(-2deg);
@@ -474,6 +473,7 @@ nav {
 
 .skills p {
   text-align: left;
+  font-size: inherit;
 }
 
 .html {
@@ -616,4 +616,88 @@ figcaption {
 #contact a {
   text-decoration: none;
   color: inherit;
+}
+
+
+@media only screen and (max-width: 500px) {
+  nav {
+    width: 100vw;
+    height: 11vw;
+  }
+  .nav-table {
+    font-size: 3vw;
+  }
+
+  .nav-cell {
+    width: 18vw;
+    margin: 0;
+  }
+  .nav-logo {
+    font-family: 'Pacifico', sans-serif;
+    font-size: 7vw;
+  }
+  .name {
+    -webkit-transform: translateZ(-230px) scale(1);
+    /* Moves name just above layer0 in the parallax stack */
+    transform: translateZ(-230px) scale(1);
+    /* Next two lines moves name down from top and rotates it in line with mountains */
+    -webkit-transform: translateY(400%) rotate(-2deg);
+        -ms-transform: translateY(400%) rotate(-2deg);
+            transform: translateY(400%) rotate(-2deg);
+    font-size: 10vw;
+  }
+
+  .purpose {
+    color: #D5D5C5;
+    /* Moves name just above layer0 in the parallax stack */
+    -webkit-transform: translateZ(-230px) scale(1);
+    transform: translateZ(-230px) scale(1);
+    /* Next two lines moves name down from top and rotates it in line with mountains */
+    -webkit-transform: translateY(1450%) rotate(-2deg);
+        -ms-transform: translateY(1450%) rotate(-2deg);
+            transform: translateY(1450%) rotate(-2deg);
+    font-size: 4.5vw;
+  }
+    .parallax__cover {
+      height: 300vw;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    #about p {
+      font-size: .8em;
+      padding: 2%;
+    }
+    #projects {
+      text-align: center;
+    }
+    .btn-container {
+      margin-top: 12%;
+      margin-bottom: 24%;
+    }
+    .btn {
+      font-size: 1em;
+      width: 60vw;
+      height: 10vw;
+      border-radius: 50px;
+      color: #D5D5C5;
+    }
+    .image-grid {
+      display: inline-block;
+      text-align: center;
+      margin: 0 auto;
+    }
+    .flex-link {
+      display: inline-block;
+      width: 90%;
+      text-align: center;
+    }
+    .skills p {
+      font-size: .8em;
+    }
+    #contact div {
+      font-size: .8em;
+      text-align: center;
+      padding: none;
+    }
 }
