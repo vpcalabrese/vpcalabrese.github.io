@@ -9,4 +9,8 @@ $(document).ready(function () {
       $('body').scrollTop(0);
     });
 
+  AOS.init({
+      duration: 1200,
+    });
+
 });

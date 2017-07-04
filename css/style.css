@@ -201,51 +201,42 @@ i {
 
 /* nav styling */
 
-nav {
+.flex-nav {
   z-index: 10000;
   top: 0;
-  left: 0;
   margin: 0 auto;
-  overflow: hidden;
-  width: 100vw;
+  width: 100%;
   height: 4vw;
   position: fixed;
   color: #D5D5C5;
-  text-align: center;
   background-color: rgba(34, 34, 34, .98);
-}
-
-.nav-table {
-  display: table;
-  margin: 0 auto;
+  display: flex;
   font-size: 1vw;
-  font-family: 'Arvo', sans-serif;
+  justify-content: center;
 }
 
-.nav-cell {
-  display: table-cell;
+.flex-item {
+  display: flex;
   text-transform: uppercase;
-  vertical-align: middle;
   width: 10vw;
-  margin: 0;
+  height: 100%;
+  font-family: 'Arvo', sans-serif;
+  justify-content: center;
+  line-height: 60px;
 }
 
-.nav-cell a {
-  display: inline-block;
+.flex-item a {
   text-decoration: none;
   color: inherit;
-  -webkit-transform: translateY(-8%);
-      -ms-transform: translateY(-8%);
-          transform: translateY(-8%);
 }
 
 .nav-logo {
   font-family: 'Pacifico', sans-serif;
   font-size: 3vw;
   text-transform: uppercase;
-  -webkit-transform: rotate(-2deg);
-      -ms-transform: rotate(-2deg);
-          transform: rotate(-2deg);
+  -webkit-transform: rotate(-6eg);
+      -ms-transform: rotate(-6deg);
+          transform: rotate(-6deg);
 }
 
 @-webkit-keyframes slideInFromTop {
@@ -450,7 +441,11 @@ nav {
   display: none;
 }
 
-
+.skills-wrapper {
+  width: 40%;
+  display: inline-block;
+  padding: 3%;
+}
 
 .skills {
   background-color: white;
@@ -467,8 +462,9 @@ nav {
 
 .bar {
   text-align: right;
-  padding: .05vw 1vw .05vw 0;
+  padding: .02vw .5vw .02vw 0;
   color: white;
+  font-size: .6em;
 }
 
 .skills p {
@@ -603,14 +599,22 @@ figcaption {
   font-size: inherit;
 }
 
-#contact div {
+.contact-info > div {
+  display: inline-block;
+  border-right: 3px solid black;
+  padding-right: 3vw;
+  padding-left: 3vw;
   font-family: 'Arvo', sans-serif;
   font-size: 1.8vw;
-  color: black;
-  text-align: center;
-  margin: 0 auto;
-  display: block;
-  width: 100%;
+}
+
+.contact-info > div:last-child {
+  padding-right: 0;
+  border-right: none;
+}
+
+.contact-info > div:first-child {
+  padding-left: 0;
 }
 
 #contact a {
@@ -700,4 +704,12 @@ figcaption {
       text-align: center;
       padding: none;
     }
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
 }

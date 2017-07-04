@@ -10,6 +10,11 @@
   <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/style.css" />
   <script src="js/jquery-3.2.1.min.js"></script>
+  <link rel="stylesheet" href="aos-master/dist/aos.css">
+  <script src="aos-master/dist/aos.js"></script>
+  <link rel="stylesheet" href="bower_components/aos/dist/aos.css" />
+  <script src="bower_components/aos/dist/aos.js"></script>
+
   <!--- Many users already have downloaded jQuery from Google or Microsoft when
   visiting another site. As a result, it will be loaded from cache when they
   visit your site, which leads to faster loading time. Also, most CDN's will
@@ -29,15 +34,12 @@
   </div>
 
   <header>
-    <nav>
-      <div class="nav-table">
-        <div class="nav-cell"><a href="#about">About</a></div>
-        <div class="nav-cell"><a href="#projects">Projects</a></div>
-        <div class="nav-cell nav-logo"><a href="#top" id="top">VC</a></div>
-        <div class="nav-cell"><a href="#">Other</a></div>
-        <div class="nav-cell"><a href="#contact">Contact</a></div>
-        </ul>
-      </div>
+    <nav class="flex-nav">
+      <div class="flex-item"><a href="#about">About</a></div>
+      <div class="flex-item"><a href="#projects">Projects</a></div>
+      <div class="flex-item nav-logo"><a href="#top" id="top">VC</a></div>
+      <div class="flex-item"><a href="#">Other</a></div>
+      <div class="flex-item"><a href="#contact">Contact</a></div>
     </nav>
   </header>
 
@@ -79,134 +81,135 @@
 
       <section class="skills">
         <h1>My Skills</h1>
-        <p>HTML</p>
-        <div class="skills-container">
-          <div class="bar html">90%</div>
+        <div class="skills-wrapper" data-aos="fade-right">
+          <p>HTML</p>
+          <div class="skills-container">
+            <div class="bar html">90%</div>
+          </div>
+
+          <p>CSS</p>
+          <div class="skills-container">
+            <div class="bar css">70%</div>
+          </div>
+
+          <p>JavaScript</p>
+          <div class="skills-container">
+            <div class="bar js">25%</div>
+          </div>
+
+          <p>PHP</p>
+          <div class="skills-container">
+            <div class="bar php">35%</div>
+          </div>
         </div>
 
-        <p>CSS</p>
-        <div class="skills-container">
-          <div class="bar css">70%</div>
-        </div>
+        <div class="skills-wrapper" data-aos="fade-left">
+            <p>Photoshop</p>
+            <div class="skills-container">
+              <div class="bar photoshop">90%</div>
+            </div>
 
-        <p>JavaScript</p>
-        <div class="skills-container">
-          <div class="bar js">25%</div>
-        </div>
+            <p>Illustrator</p>
+            <div class="skills-container">
+              <div class="bar illustrator">70%</div>
+            </div>
 
-        <p>PHP</p>
-        <div class="skills-container">
-          <div class="bar php">35%</div>
-        </div>
+            <p>SQL</p>
+            <div class="skills-container">
+              <div class="bar sql">60%</div>
+            </div>
 
-        <p>Photoshop</p>
-        <div class="skills-container">
-          <div class="bar photoshop">90%</div>
+            <p>Java</p>
+            <div class="skills-container">
+              <div class="bar java">75%</div>
+            </div>
         </div>
+      </section>
 
-        <p>Illustrator</p>
-        <div class="skills-container">
-          <div class="bar illustrator">70%</div>
-        </div>
+      <section id="projects">
+        <h1>Projects</h1>
 
-        <p>SQL</p>
-        <div class="skills-container">
-          <div class="bar sql">60%</div>
-        </div>
-
-        <p>Java</p>
-        <div class="skills-container">
-          <div class="bar java">75%</div>
+        <div class="image-grid">
+          <a class="flex-link" href="https://indigodesigned.com/share/run/gn04g2vyt1fg#f=Splash%20Screen&" alt="" target="_blank">
+            <figure>
+              <img src="images/appmain.gif" alt="">
+              <figcaption>
+                <h4 class="project-title">RU Hungry? App Prototype</h4></h4>
+                An app prototype developed for the Rutgers ITI Showcase 2017.
+              </figcaption>
+            </figure>
+          </a>
+          <a class="flex-link" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg02.jpg">
+            <figure>
+              <img src="images/poster.png" alt="">
+              <figcaption>
+                <h4 class="project-title">SynApps</h4> Company branding for the RU Hungry? App Prototype project.
+              </figcaption>
+            </figure>
+          </a>
+          <a class="flex-link" href="https://matguardusa.com" alt="">
+            <figure>
+              <img src="images/matgaurdopt.jpg" alt="">
+              <figcaption>
+                <h4 class="project-title">Matgaurd USA</h4> Captured pictures of Matgaurd products and digitally prepared them for professional use.
+              </figcaption>
+            </figure>
+          </a>
+          <a class="flex-link" href="images/infographic.png" alt="">
+            <figure>
+              <img src="images/infoopt.jpg" alt="">
+              <figcaption>
+                <h4 class="project-title">Harnessing the Stars</h4> An infographic that explains how fusion energy can be the energy of the future.
+              </figcaption>
+            </figure>
+          </a>
+          <a class="flex-link" href="http://iti330.rutgers-sci.domains/iti330_grp9/searchMerchant2.php" alt="" target="_blank">
+            <figure>
+              <img src="images/data.png" alt="">
+              <figcaption>
+                <h4 class="project-title">Expense Database</h4> A database that tracks expenses and produces expense reports.
+              </figcaption>
+            </figure>
+          </a>
+          <a class="flex-link" href="http://pikedreamgirl.000webhostapp.com" alt="" target="_blank">
+            <figure>
+              <img src="images/newhead.gif" alt="">
+              <figcaption>
+                <h4 class="project-title">Pike Dream Girl Website</h4> A website prototype for the annual Pike Dream Girl charity event hosted by Pi Kappa Alpha at Rutgers University.
+              </figcaption>
+            </figure>
+          </a>
+          <a class="flex-link" href="affinity.html" alt="" target="_blank">
+            <figure>
+              <img src="images/affinityopt.jpg" alt="">
+              <figcaption>
+                <h4 class="project-title">Affinity</h4> A digital painting of a scene first sketched with paper and pencil.
+              </figcaption>
+            </figure>
+          </a>
+          <a class="flex-link" href="images/Self-PortraitFinal2.png" alt="" target="_blank">
+            <figure>
+              <img src="images/Self-PortraitFinalopt.jpg" alt="">
+              <figcaption>
+                <h4 class="project-title">Nirvana</h4> A self-portrait project completed during school.
+              </figcaption>
+            </figure>
+          </a>
         </div>
 
       </section>
 
-  <section id="projects">
-    <h1>Projects</h1>
-
-    <div class="image-grid">
-      <a class="flex-link" href="https://indigodesigned.com/share/run/gn04g2vyt1fg#f=Splash%20Screen&" alt="" target="_blank">
-        <figure>
-          <img src="images/appmain.gif" alt="">
-          <figcaption>
-            <h4 class="project-title">RU Hungry? App Prototype</h4></h4>
-              An app prototype developed for the Rutgers ITI Showcase 2017.
-          </figcaption>
-        </figure>
-      </a>
-      <a class="flex-link" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg02.jpg">
-        <figure>
-          <img src="images/poster.png" alt="">
-          <figcaption>
-            <h4 class="project-title">SynApps</h4>
-               Company branding for the RU Hungry? App Prototype project.
-          </figcaption>
-        </figure>
-      </a>
-      <a class="flex-link" href="https://matguardusa.com" alt="">
-        <figure>
-          <img src="images/matgaurdopt.jpg" alt="">
-          <figcaption>
-            <h4 class="project-title">Matgaurd USA</h4>
-              Captured pictures of Matgaurd products and digitally prepared them for professional use.
-          </figcaption>
-        </figure>
-      </a>
-      <a class="flex-link" href="images/infographic.png" alt="">
-        <figure>
-          <img src="images/infoopt.jpg" alt="">
-          <figcaption>
-            <h4 class="project-title">Harnessing the Stars</h4>
-              An infographic that explains how fusion energy can be the energy of the future.
-          </figcaption>
-        </figure>
-      </a>
-      <a class="flex-link" href="http://iti330.rutgers-sci.domains/iti330_grp9/searchMerchant2.php" alt="" target="_blank">
-        <figure>
-          <img src="images/data.png" alt="">
-          <figcaption>
-            <h4 class="project-title">Expense Database</h4>
-              A database that tracks expenses and produces expense reports.
-          </figcaption>
-        </figure>
-      </a>
-      <a class="flex-link" href="http://pikedreamgirl.000webhostapp.com" alt="" target="_blank">
-        <figure>
-          <img src="images/newhead.gif" alt="">
-          <figcaption>
-            <h4 class="project-title">Pike Dream Girl Website</h4>
-              A website prototype for the annual Pike Dream Girl charity event hosted by Pi Kappa Alpha at Rutgers University.
-          </figcaption>
-        </figure>
-      </a>
-      <a class="flex-link" href="affinity.html" alt="" target="_blank">
-        <figure>
-          <img src="images/affinityopt.jpg" alt="">
-          <figcaption>
-            <h4 class="project-title">Affinity</h4>
-              A digital painting of a scene first sketched with paper and pencil.
-          </figcaption>
-        </figure>
-      </a>
-      <a class="flex-link" href="images/Self-PortraitFinal2.png" alt="" target="_blank">
-        <figure>
-          <img src="images/Self-PortraitFinalopt.jpg" alt="">
-          <figcaption>
-            <h4 class="project-title">Nirvana</h4>
-              A self-portrait project completed during school.
-          </figcaption>
-        </figure>
-      </a>
-    </div>
-
-  </section>
-
-  <section id="contact">
-    <h1>Conact Me</h1>
-    <div>
-      vincentcalabrese.ux@gmail.com | <a href="https://www.linkedin.com/in/vpcalabrese" alt="" target="_blank">https://www.linkedin.com/in/vpcalabrese</a>
-    </div>
-  </section>
+      <section id="contact">
+        <h1>Conact Me</h1>
+        <div class="contact-info">
+          <div class="email">
+            vincentcalabrese.ux@gmail.com
+          </div>
+          <div class="linkedin">
+            <a href="https://www.linkedin.com/in/vpcalabrese" alt="" target="_blank">https://www.linkedin.com/in/vpcalabrese</a>
+          </div>
+        </div>
+      </section>
 
 
 
@@ -216,6 +219,20 @@
 
   <script src="https://code.jquery.com/jquery-latest.js"></script>
   <script src="js/main.js"></script>
+  <script>
+  AOS.init({
+duration: 1200,
+});
+  </script>
+
+  <script>
+  AOS.init({
+    offset: 200,
+    duration: 600,
+    easing: 'ease-in-sine',
+    delay: 100,
+  });
+</script>
 
 </body>
 
