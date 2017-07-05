@@ -5,12 +5,10 @@ $(document).ready(function () {
     $('body').addClass('loaded');
   }, 3000);
 
-  $('#top').click(function () {
-      $('body').scrollTop(0);
-    });
-
   AOS.init({
       duration: 1200,
     });
 
 });
+
+AOS.init();
