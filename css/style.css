@@ -624,6 +624,9 @@ figcaption {
 
 
 @media only screen and (max-width: 500px) {
+  html, body {
+    -webkit-overflow-scrolling: touch;
+  }
   nav {
     width: 100vw;
     height: 11vw;
