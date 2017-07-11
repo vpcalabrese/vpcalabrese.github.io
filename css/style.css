@@ -132,9 +132,9 @@ i {
 
 .name {
   color: #222;
-  -webkit-transform: translateZ(-230px) scale(1);
+  -webkit-transform: translateZ(0px) scale(1);
   /* Moves name just above layer0 in the parallax stack */
-  transform: translateZ(-230px) scale(1);
+  transform: translateZ(0px) scale(1);
   /* Next two lines moves name down from top and rotates it in line with mountains */
   top: 50%;
   -webkit-transform: translateY(175%) rotate(-2deg);
@@ -149,8 +149,8 @@ i {
 .purpose {
   color: #D5D5C5;
   /* Moves name just above layer0 in the parallax stack */
-  -webkit-transform: translateZ(-230px) scale(1);
-  transform: translateZ(-230px) scale(1);
+  -webkit-transform: translateZ(0px) scale(1);
+  transform: translateZ(0px) scale(1);
   /* Next two lines moves name down from top and rotates it in line with mountains */
   top: 50%;
   -webkit-transform: translateY(600%) rotate(-2deg);
