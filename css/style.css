@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Arvo');
 @import url('https://fonts.googleapis.com/css?family=Pacifico');
+
 html, body {
   background-color: #444;
   margin: 0;
@@ -12,260 +13,9 @@ h1 {
   font-size: 2.5vw;
 }
 
-
-/* -- parallax scrolling Intro -- */
-
-.parallax {
-  -webkit-perspective: 100px;
-  perspective: 100px;
-  height: 100vh;
-  width: 100%;
-  overflow-x: hidden;
-  overflow-y: auto;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  margin: 0 auto;
-}
-
-.parallax__layer {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-
-.parallax__layer img {
-  display: block;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  -o-object-fit: cover;
-     object-fit: cover;
-  margin: 0 auto;
-}
-
-
-/* Cover layer in place so when user scrolls up, there is a transition into a div element that covers the layers behind it.
-Without covering layers behind it, uneven layers would appear out of place. Can test this by removing cover layer. - */
-
-.parallax__cover {
-  background: #000;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  height: 61vw;
-  width: 100%;
-  z-index: 2;
-  margin: auto;
-  text-align: center;
-  /* Unitless line height because child elements will
-  inherit the raw number value, rather than the computed value. With this, child
-  elements can compute their line heights based on their computed font size, rather
-  than inheriting an arbitrary value from a parent that is more likely to need overriding.
-  More found at https://css-tricks.com/almanac/properties/l/line-height */
-  line-height: 2.5;
-  -webkit-transform: translate3d(0, 0, 0);
-}
-
-#about p {
-  font-family: 'Arvo', sans-serif;
-  margin: 0 6% 3% 6%;
-  font-size: 1.5vw;
-  text-align: left;
-  text-indent: 6%;
-  color: #D5D5C5;
-}
-
-#about h1 {
-  padding-top: 6%;
-  color: #D5D5C5;
-}
-
-.btn-container {
-  margin-top: 3%;
-  margin-bottom: 12%;
-}
-
-.btn {
-  margin: auto;
-  text-align: center;
-  font-size: 1.5vw;
-  text-decoration: none;
-  width: 20vw;
-  height: 4vw;
-  border: 2px solid #D5D5C5;
-  font-family: 'Arvo', sans-serif;
-  border-radius: 50px;
-  color: #D5D5C5;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.btn:hover {
-  border: 2px solid #fff;
-  color: #fff;
-}
-
-i {
-  padding-right: 5%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.name {
-  color: #222;
-  -webkit-transform: translateZ(0px) scale(1);
-  /* Moves name just above layer0 in the parallax stack */
-  transform: translateZ(0px) scale(1);
-  /* Next two lines moves name down from top and rotates it in line with mountains */
-  top: 50%;
-  -webkit-transform: translateY(175%) rotate(-2deg);
-      -ms-transform: translateY(175%) rotate(-2deg);
-          transform: translateY(175%) rotate(-2deg);
-  font-size: 8vw;
-  margin: 0 auto;
-  text-align: center;
-  font-family: 'Pacifico', cursive;
-}
-
-.purpose {
-  color: #D5D5C5;
-  /* Moves name just above layer0 in the parallax stack */
-  -webkit-transform: translateZ(0px) scale(1);
-  transform: translateZ(0px) scale(1);
-  /* Next two lines moves name down from top and rotates it in line with mountains */
-  top: 50%;
-  -webkit-transform: translateY(600%) rotate(-2deg);
-      -ms-transform: translateY(600%) rotate(-2deg);
-          transform: translateY(600%) rotate(-2deg);
-  font-size: 3vw;
-  margin: 0 auto;
-  text-align: center;
-  font-family: 'Arvo', cursive;
-}
-
-
-/* Stacking the parallax layers, scroll speed determined by combination of z and scale */
-
-.parallax__layer__0 {
-  -webkit-transform: translateZ(-250px) scale(3.5);
-  transform: translateZ(-250px) scale(3.5);
-}
-
-.parallax__layer__1 {
-  -webkit-transform: translateZ(-200px) scale(3);
-  transform: translateZ(-200px) scale(3);
-}
-
-.parallax__layer__2 {
-  -webkit-transform: translateZ(-150px) scale(2.5);
-  transform: translateZ(-150px) scale(2.5);
-  /* opacity lower so intro text (.name and .purpose) is more readable for viewer */
-  opacity: .9;
-}
-
-.parallax__layer__3 {
-  -webkit-transform: translateZ(-100px) scale(2);
-  transform: translateZ(-100px) scale(2);
-}
-
-.parallax__layer__4 {
-  -webkit-transform: translateZ(-50px) scale(1.5);
-  transform: translateZ(-50px) scale(1.5);
-}
-
-.parallax__layer__5 {
-  -webkit-transform: translateZ(0px) scale(1);
-  transform: translateZ(0px) scale(1);
-    -webkit-transform: translate3d(0, 0, 0);
-}
-
-
-/* nav styling */
-
-.flex-nav {
-  z-index: 10000;
-  top: 0;
-  margin: 0 auto;
-  width: 100%;
-  height: 4vw;
-  position: fixed;
-  color: #D5D5C5;
-  background-color: rgba(34, 34, 34, .98);
-  display: flex;
-  font-size: 1vw;
-  justify-content: center;
-}
-
-.flex-item {
-  display: flex;
-  text-transform: uppercase;
-  width: 10vw;
-  height: 100%;
-  font-family: 'Arvo', sans-serif;
-  justify-content: center;
-  line-height: 60px;
-}
-
-.flex-item a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.nav-logo {
-  font-family: 'Pacifico', sans-serif;
-  font-size: 3vw;
-  text-transform: uppercase;
-  -webkit-transform: rotate(-6eg);
-      -ms-transform: rotate(-6deg);
-          transform: rotate(-6deg);
-}
-
-@-webkit-keyframes slideInFromTop {
-  0% {
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
-  }
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
-
-@keyframes slideInFromTop {
-  0% {
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
-  }
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
-
-.nav-animation {
-  /* This section calls the slideInFromLeft animation we defined above */
-  -webkit-animation: 3s ease-out 0s 6s slideInFromTop;
-          animation: 3s ease-out 0s 6s slideInFromTop;
-}
+/* -------------------------------------------------------------
+PAGE LOADER
+------------------------------------------------------------- */
 
 #loader-wrapper {
   position: fixed;
@@ -387,8 +137,7 @@ i {
   right: 0;
 }
 
-
-/* Loaded */
+/* When page is loaded */
 
 .loaded #loader-wrapper .loader-section.section-left {
   -webkit-transform: translateX(-100%);
@@ -434,12 +183,296 @@ i {
   transition: all 0.3s 1s ease-out;
 }
 
-
-/* JavaScript Turned Off */
+/* If user has JavaScript turned off */
 
 .no-js #loader-wrapper {
   display: none;
 }
+
+/* -------------------------------------------------------------
+NAV BAR
+------------------------------------------------------------- */
+
+.flex-nav {
+  /* Set width to 100% so it automatically adjusts to width of browser */
+  width: 100%;
+  height: 60px;
+  /* Position fixed so it stays in place during scroll */
+  position: fixed;
+  /* Set a high z-index so it stays above everything on page */
+  z-index: 10000;
+  /* Set top and left to 0 so there is no white space */
+  top: 0;
+  left: 0;
+  /* Display as flex */
+  display: flex;
+  /* Flex property to center the flex items within this parent div */
+  justify-content: center;
+  color: #D5D5C5;
+  background-color: rgba(34, 34, 34, .98);
+}
+
+/* These are the child divs to .flex-nav that contain nav links */
+
+.flex-item {
+  /* Display flex */
+  display: inherit;
+  /* Center the text inside these divs */
+  justify-content: center;
+  /* Set the width and height */
+  height: 100%;
+  font-family: 'Arvo', sans-serif;
+  text-transform: uppercase;
+  /* line-height helps vertically center the text inside .flex-item*/
+  line-height: 60px;
+  font-size: 1em;
+  flex-grow: 1;
+}
+
+/* Contact link is bigger word so make it take up more space (this way it appears centered) */
+.flex-item:last-child{
+  flex-grow: 1.1;
+}
+
+.flex-item a {
+    /* Remove underline from links */
+  text-decoration: none;
+    /* Inherit the text color since by default links are blue*/
+  color: inherit;
+}
+
+/* .nav-logo is really just the center link with my initials */
+
+.nav-logo {
+  font-family: 'Pacifico', sans-serif;
+  font-size: 2.5em;
+  text-transform: uppercase;
+  /* Rotate the text so it matches the rothation of my name in the intro below the nav */
+  -webkit-transform: rotate(-6eg);
+      -ms-transform: rotate(-6deg);
+          transform: rotate(-6deg);
+}
+
+@media only screen and (max-width:37.5em) {
+  /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+  .flex-nav {
+    height: 40px;
+  }
+  .flex-item {
+    font-size: 5%;
+    line-height: 40px;
+  }
+  .nav-logo {
+    font-size: 1.8em;
+  }
+}
+
+@media only screen and (max-width:37.5em) and (orientation: landscape) {
+  /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+  .flex-nav {
+    height: 20px;
+  }
+  .flex-item {
+    font-size: 2%;
+    line-height: 20px;
+  }
+  .nav-logo {
+    font-size: 1em;
+  }
+}
+
+/* -------------------------------------------------------------
+INTRO (MULTILAYERED PARALLAX SCROLLING)
+------------------------------------------------------------- */
+
+.parallax {
+  -webkit-perspective: 100px;
+  perspective: 100px;
+  height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+}
+
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.parallax__layer img {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 0 auto;
+}
+
+/* Cover layer in place so when user scrolls up, there is a transition into a div element that covers the layers behind it.
+Without covering layers behind it, uneven layers would appear out of place. Can test this by removing cover layer. - */
+
+.parallax__cover {
+  background: #000;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 61vw;
+  width: 100%;
+  z-index: 2;
+  margin: auto;
+  text-align: center;
+  /* Unitless line height because child elements will
+  inherit the raw number value, rather than the computed value. With this, child
+  elements can compute their line heights based on their computed font size, rather
+  than inheriting an arbitrary value from a parent that is more likely to need overriding.
+  More found at https://css-tricks.com/almanac/properties/l/line-height */
+  line-height: 2.5;
+  -webkit-transform: translate3d(0, 0, 0);
+}
+
+/* Stacking the parallax layers, scroll speed determined by combination of z and scale */
+
+.parallax__layer__0 {
+  -webkit-transform: translateZ(-250px) scale(3.5);
+  transform: translateZ(-250px) scale(3.5);
+}
+
+.parallax__layer__1 {
+  -webkit-transform: translateZ(-200px) scale(3);
+  transform: translateZ(-200px) scale(3);
+}
+
+.parallax__layer__2 {
+  -webkit-transform: translateZ(-150px) scale(2.5);
+  transform: translateZ(-150px) scale(2.5);
+  /* opacity lower so intro text (.name and .purpose) is more readable for viewer */
+  opacity: .9;
+}
+
+.parallax__layer__3 {
+  -webkit-transform: translateZ(-100px) scale(2);
+  transform: translateZ(-100px) scale(2);
+}
+
+.parallax__layer__4 {
+  -webkit-transform: translateZ(-50px) scale(1.5);
+  transform: translateZ(-50px) scale(1.5);
+}
+
+.parallax__layer__5 {
+  -webkit-transform: translateZ(0px) scale(1);
+  transform: translateZ(0px) scale(1);
+    -webkit-transform: translate3d(0, 0, 0);
+}
+
+.name {
+  color: #222;
+  -webkit-transform: translateZ(0px) scale(1);
+  /* Moves name just above layer0 in the parallax stack */
+  transform: translateZ(0px) scale(1);
+  /* Next two lines moves name down from top and rotates it in line with mountains */
+  top: 50%;
+  -webkit-transform: translateY(175%) rotate(-2deg);
+      -ms-transform: translateY(175%) rotate(-2deg);
+          transform: translateY(175%) rotate(-2deg);
+  font-size: 8vw;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Pacifico', cursive;
+}
+
+.purpose {
+  color: #D5D5C5;
+  /* Moves name just above layer0 in the parallax stack */
+  -webkit-transform: translateZ(0px) scale(1);
+  transform: translateZ(0px) scale(1);
+  /* Next two lines moves name down from top and rotates it in line with mountains */
+  top: 50%;
+  -webkit-transform: translateY(600%) rotate(-2deg);
+      -ms-transform: translateY(600%) rotate(-2deg);
+          transform: translateY(600%) rotate(-2deg);
+  font-size: 3vw;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Arvo', cursive;
+}
+
+/* -------------------------------------------------------------
+ABOUT SECTION
+------------------------------------------------------------- */
+
+#about p {
+  font-family: 'Arvo', sans-serif;
+  margin: 0 6% 3% 6%;
+  font-size: 1.5vw;
+  text-align: left;
+  text-indent: 6%;
+  color: #D5D5C5;
+}
+
+#about h1 {
+  padding-top: 6%;
+  color: #D5D5C5;
+}
+
+.btn-container {
+  margin-top: 3%;
+  margin-bottom: 12%;
+}
+
+.btn {
+  margin: auto;
+  text-align: center;
+  font-size: 1.5vw;
+  text-decoration: none;
+  width: 20vw;
+  height: 4vw;
+  border: 2px solid #D5D5C5;
+  font-family: 'Arvo', sans-serif;
+  border-radius: 50px;
+  color: #D5D5C5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.btn:hover {
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+i {
+  padding-right: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* -------------------------------------------------------------
+SKILLS SECTION
+------------------------------------------------------------- */
 
 .skills-wrapper {
   width: 40%;
@@ -511,6 +544,10 @@ i {
   width: 75%;
   background-color: #222;
 }
+
+/* -------------------------------------------------------------
+PROJECTS SECTION
+------------------------------------------------------------- */
 
 #projects {
   background-color: #444;
@@ -590,6 +627,10 @@ figcaption {
   margin: 0;
 }
 
+/* -------------------------------------------------------------
+CONTACT SECTION
+------------------------------------------------------------- */
+
 #contact {
   background-color: #d3d3d3;
   display: block;
@@ -622,6 +663,15 @@ figcaption {
   color: inherit;
 }
 
+/* -------------------------------------------------------------
+MEDIA QUERIES
+@media (min-width:320px) { smartphones, portrait iPhone, portrait 480x320 phones (Android) }
+@media (min-width:480px) { smartphones, Android phones, landscape iPhone }
+@media (min-width:600px) { portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) }
+@media (min-width:801px) { tablet, landscape iPad, lo-res laptops ands desktops }
+@media (min-width:1025px) { big landscape tablets, laptops, and desktops }
+@media (min-width:1281px) { hi-res laptops and desktops }
+------------------------------------------------------------- */
 
 @media only screen and (max-width: 500px) {
   html, body {
@@ -707,12 +757,4 @@ figcaption {
       text-align: center;
       padding: none;
     }
-}
-
-.hidden {
-  opacity: 0;
-}
-
-.visible {
-  opacity: 1;
 }
