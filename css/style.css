@@ -269,15 +269,8 @@ NAV BAR
 
 @media only screen and (max-width:37.5em) and (orientation: landscape) {
   /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
-  .flex-nav {
-    height: 20px;
-  }
-  .flex-item {
-    font-size: 2%;
-    line-height: 20px;
-  }
-  .nav-logo {
-    font-size: 1em;
+  html, body {
+    -webkit-overflow-scrolling: touch;
   }
 }
 
@@ -677,22 +670,7 @@ MEDIA QUERIES
   html, body {
     -webkit-overflow-scrolling: touch;
   }
-  nav {
-    width: 100vw;
-    height: 11vw;
-  }
-  .nav-table {
-    font-size: 3vw;
-  }
 
-  .nav-cell {
-    width: 18vw;
-    margin: 0;
-  }
-  .nav-logo {
-    font-family: 'Pacifico', sans-serif;
-    font-size: 7vw;
-  }
   .name {
     -webkit-transform: translateZ(-230px) scale(1);
     /* Moves name just above layer0 in the parallax stack */
