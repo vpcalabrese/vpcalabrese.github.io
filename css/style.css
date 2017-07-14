@@ -272,6 +272,9 @@ NAV BAR
   html, body {
     -webkit-overflow-scrolling: touch;
   }
+  .parallax {
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 
 /* -------------------------------------------------------------
