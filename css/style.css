@@ -460,7 +460,7 @@ ABOUT SECTION
   color: #fff;
 }
 
-i {
+#about i {
   padding-right: 5%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -634,25 +634,24 @@ CONTACT SECTION
   text-align: center;
   color: black;
   padding: 3% 6% 6% 6%;
-  font-size: inherit;
 }
 
-.contact-info > div {
-  display: inline-block;
-  border-right: 3px solid black;
-  padding-right: 3vw;
-  padding-left: 3vw;
+.contact-info-container {
+  display: flex;
+  justify-content: center;
   font-family: 'Arvo', sans-serif;
-  font-size: 1.8vw;
+  font-size: 1.5vw;
 }
 
-.contact-info > div:last-child {
-  padding-right: 0;
-  border-right: none;
+.contact-info-container div {
+  display: flex;
+  margin: 0 3% 0 3%;
 }
 
-.contact-info > div:first-child {
-  padding-left: 0;
+.contact-info-container i {
+  font-size: 2vw;
+  line-height: 3.9vw;
+  padding-right: 3%;
 }
 
 #contact a {
