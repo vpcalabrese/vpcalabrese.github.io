@@ -6,46 +6,71 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Affinity</title>
   <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet">
   <style>
-    body, html {
-      height: 100%;
-      margin: 0;
+
+    .image-grid {
+    	margin: 0 auto;
+    	height: auto;
+    	width: 100%;
     }
-    .affinity1 {
-      background: url("images/affinity1.jpg");
-      height: 100%;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
+
+    .image-grid ul {
+      font-size:0;
+      list-style:none;
+      width:100%;
+      /* Necessary. Takes away space that appears to left of ul list. */
+      padding: 0;
     }
-    .affinity {
-      background: url("images/affinity.jpg");
-      height: 100%;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
+
+    .image-grid li {
+        display: inline-block;
+        width: 33.3%;
+    }
+
+    .image-grid img {
+      width:100%;
+      opacity: .8;
+    }
+
+    .image-grid img:hover {
+      width:100%;
+      opacity: 1;
+    }
+
+    .image-grid .feature {
+      float:left;
+      width:100%;
+    }
+
+    @media (max-width: 640px) {
+      .image-grid li {
+          width:100%;
+      }
+
+      .image-grid .feature {
+        width:100%;
+      }
     }
 
   </style>
 </head>
 <body>
-
-  <div id="loader-wrapper">
-    <div id="loader"></div>
-    <div class="loader-section section-left"></div>
-    <div class="loader-section section-right"></div>
-  </div>
-
-  <a href="images/affinity1.jpg" alt="" target="_blank">
-    <div class="affinity1"></div>
-  </a>
-
-  <a href="images/affinity.jpg" alt="" target="_blank">
-    <div class="affinity"></div>
-  </a>
-
-  <script src="https://code.jquery.com/jquery-latest.js"></script>
-  <script src="js/main.js"></script>
-
+  </section>
+    <div id="container">
+      <div class="image-grid">
+        <ul>
+          <li class="feature">
+            <img src="images/affinity.jpg"/>
+          </li>
+          <li class="feature">
+            <img src="images/affinity1.jpg"/>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!--<h1 class="back"><a href="index.html#projects"><i class="fa fa-arrow-left" aria-hidden="true"></i>Back to Projects</a></h1>
+-->
 </body>
 </html>

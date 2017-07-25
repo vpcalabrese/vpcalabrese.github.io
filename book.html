@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Space is the Place</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet">
+  <style>
+
+    .image-grid {
+    	margin: 0 auto;
+    	height: auto;
+    	width: 100%;
+    }
+
+    .image-grid ul {
+      font-size:0;
+      list-style:none;
+      width:100%;
+      /* Necessary. Takes away space that appears to left of ul list. */
+      padding: 0;
+    }
+
+    .image-grid li {
+        display: inline-block;
+        width: 33.3%;
+    }
+
+    .image-grid img {
+      width:100%;
+      opacity: .8;
+    }
+
+    .image-grid img:hover {
+      width:100%;
+      opacity: 1;
+    }
+
+    .image-grid .feature {
+      float:left;
+      width:66.6%;
+    }
+
+    @media (max-width: 640px) {
+      .image-grid li {
+          width:100%;
+      }
+
+      .image-grid .feature {
+        width:100%;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  </section>
+    <div id="container">
+      <div class="image-grid">
+        <ul>
+          <li class="feature">
+            <img src="images/book.png"/>
+          </li>
+          <li>
+            <img src="images/bookcover.png"/>
+          </li>
+          <li class="feature">
+            <img src="images/part1.jpg"/>
+          </li>
+          <li>
+            <img src="images/part2.jpg"/>
+          </li>
+          <li>
+            <img src="images/part3.jpg"/>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!--<h1 class="back"><a href="index.html#projects"><i class="fa fa-arrow-left" aria-hidden="true"></i>Back to Projects</a></h1>
+-->
+</body>
+</html>
