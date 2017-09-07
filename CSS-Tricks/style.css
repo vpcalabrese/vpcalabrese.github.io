@@ -1,0 +1,409 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis|Open+Sans|Open+Sans+Condensed:300');
+
+/*----------GENERAL STYLING----------*/
+html, body {
+	margin: 0 auto;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	background-color: #222;
+	/* Double space all text */
+	font-family: 'Open Sans Condensed', serif;
+}
+
+/* All headers will be uppercase Dosis font-family */
+h1, h2, h3 {
+	font-family: 'Dosis', serif;
+	text-transform: uppercase;
+}
+
+/* All other text will be Open Sans and indented */
+p {
+	font-family: "Open Sans Condensed", serif;
+	font-weight: 500;
+	font-size: 1.5em;
+	color: #fff;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+/*----------END GENERAL STYLING----------*/
+
+/*----------NAV----------*/
+body {
+  /* When the nav button is clicked, the whole page will slide to the right. This stops it from creating a scroll when overflow happens */
+  overflow-x: hidden;
+}
+
+nav {
+	/* Make sure the nav is fixed at the top left */
+	position: fixed;
+	/* Make sure the nav is above all content */
+	z-index: 1000;
+	/* Set top and bottom to 0 to make sure the nav takes all the height from top to bottom */
+	top: 0;
+	bottom: 0;
+	background-color: #222;
+	width: 9vw;
+	height: 100%;
+	box-shadow: .5em 0 1em #111;
+	transform: translate3d(-9vw, 0, 0);
+	transition: transform 0.4s ease;
+}
+
+nav ul {
+    list-style: none;
+    margin-top: 2vw;
+    padding: 0;
+    color: #fff;
+}
+
+/*-----List items in nav, aka nav icons/buttons-----*/
+nav ul li {
+	/* Give some space between the buttons */
+	padding-top: 1vw;
+	/* Center align all of the nav list items */
+	text-align: center;
+	margin: 0;
+}
+
+/*-----Text under icons/buttons in nav-----*/
+nav ul li p {
+	font-family: 'Open Sans Condensed', serif;
+	/* Display them block so they take up the full width */
+	display: block;
+	color: #fff;
+	font-size: 1.2vw;
+	/* Hide them until the user hovers over the nav icon/button */
+	visibility: hidden;
+	text-align: center;
+	margin: 0;
+}
+
+/* This allows link under nav icons/buttons to show visible upon hover */
+a:hover + p {
+	visibility: visible;
+}
+
+/* Toggle button to slide nav over */
+.nav-toggle-btn {
+	display: block;
+	position: absolute;
+	width: 4.167vw;
+	height: 2.5vw;
+	left: 100%;
+	top: 1vw;
+}
+
+.active-nav nav {
+	transform: translate3d(0, 0, 0);
+}
+
+.content {
+	margin: auto;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	transition: transform 0.4s ease;
+}
+
+.active-nav .content {
+	transform: translate3d(9vw, 0, 0);
+}
+/*----------END NAV----------*/
+
+/*----------INTRO----------*/
+.intro {
+	height: 100%;
+	width: 100%;
+	margin: auto;
+	/* no repeat means image only shows once and 50% 50% will center it on the screen */
+	background: url(images/background.jpg) no-repeat 50% 50%;
+	/* cover scales the background image to be as large as possible so that the background area is completely covered by the background image */
+	/* Some parts of the background image may not be in view within the background positioning area */
+	background-size: cover;
+	display: table;
+	top: 0;
+}
+
+/* The descendant selector (space) matches all elements that are descendants of a specified element */
+/* The following example selects all <.inner> elements inside <.intro> elements */
+.intro .inner {
+	display: table-cell;
+	vertical-align: middle;
+	width: 100%;
+	/* So the text can be as large as you want: */;
+	max-width: none;
+}
+
+/* Style the content class is inside of the inner class to cover Photography and my pictures. texts */
+.inner-content {
+	max-width: 100%;
+	margin: auto;
+}
+
+.inner-content h1 {
+	font-family: 'Dosis', serif;
+	font-size: 7vw;
+	font-weight: 700;
+	color: #FFF;
+	text-align: center;
+	padding: 1%;
+	text-shadow: 1px 1px 8px #000;
+	margin: 0;
+	text-transform: uppercase;
+	letter-spacing: 1vw;
+}
+
+.inner-content p {
+	color: #FFF;
+	text-shadow: 1px 1px 8px #000;
+	text-align: center;
+	font-family: 'Open Sans Condensed', serif;
+	font-size: 2.5vw;
+	letter-spacing: 1vw;
+	border: 1px solid #3a948b;
+	background-color: #333;
+	width: 50%;
+	margin: 0 auto;
+}
+
+.inner {
+	max-width: 600%;
+	margin: auto;
+	font-size: 170%;
+	line-height: 1.6;
+	padding: 10px;
+}
+
+/*----------END INTRO----------*/
+
+/*----------PARALLAX EFFECT----------*/
+.parallax {
+	background: url(images/para1.jpg) repeat fixed 100%;
+	background-position: center;
+	opacity: .7;
+}
+
+.parallax2 {
+	background: url(images/beach2.png) repeat fixed 100%;
+	background-position: center;
+	opacity: .7;
+}
+
+.parallax-inner {
+	padding-top: 10%;
+}
+/*----------END PARALLAX EFFECT----------*/
+
+.project {
+	height: 50vh;
+}
+
+
+/*----------ICONS----------*/
+.icon {
+	font-size: 2.5vw;
+	padding-top: 2vw;
+}
+
+.icon-home {
+	color: white;
+	transition-property: color;
+  	transition-duration: .2s;
+  	transition-timing-function: linear, ease-in;
+}
+
+.icon-home:hover {
+	color: #cda34f;
+	text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #cda34f , 0 0 70px #cda34f , 0 0 80px #cda34f , 0 0 100px #cda34f ;
+}
+
+.icon-aboutme {
+	color: white;
+	transition-property: color;
+  	transition-duration: .2s;
+  	transition-timing-function: linear, ease-in;
+}
+
+.icon-aboutme:hover {
+	color: #b5e582;
+	text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #b5e582 , 0 0 70px #b5e582 , 0 0 80px #b5e582 , 0 0 100px #b5e582 ;
+
+}
+
+.icon-education {
+	color: white;
+	transition-property: color;
+  	transition-duration: .2s;
+  	transition-timing-function: linear, ease-in;
+}
+
+.icon-education:hover {
+	color: #fc4445;
+	text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #fc4445 , 0 0 70px #fc4445 , 0 0 80px #fc4445 , 0 0 100px #fc4445 ;
+}
+
+.icon-projects {
+	color: white;
+	transition-property: color;
+  	transition-duration: .2s;
+  	transition-timing-function: linear, ease-in;
+}
+
+.icon-projects:hover {
+	color: #e3f09b;
+	text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #e3f09b , 0 0 70px #e3f09b , 0 0 80px #e3f09b , 0 0 100px #e3f09b ;
+}
+
+.icon-photography {
+	color: white;
+	transition-property: color;
+  	transition-duration: .2s;
+  	transition-timing-function: linear, ease-in;
+}
+
+.icon-photography:hover {
+	color: #02c8a7;
+	text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #02c8a7 , 0 0 70px #02c8a7 , 0 0 80px #02c8a7 , 0 0 100px #02c8a7 ;
+}
+
+.icon-videos {
+	color: white;
+	transition-property: color;
+  	transition-duration: .2s;
+  	transition-timing-function: linear, ease-in;
+}
+
+.icon-videos:hover {
+	color: #8860D0;
+	text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #8860D0 , 0 0 70px #8860D0 , 0 0 80px #8860D0 , 0 0 100px #8860D0 ;
+}
+
+.icon-contact {
+	color: white;
+	transition-property: color;
+  	transition-duration: .2s;
+  	transition-timing-function: linear, ease-in;
+}
+
+.icon-contact:hover {
+	color: #F9A03F;
+	text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #F9A03F , 0 0 70px #F9A03F , 0 0 80px #F9A03F , 0 0 100px #F9A03F ;
+}
+/*----------END ICONS----------*/
+
+/*----------CONTAINERS----------*/
+
+/* Each container has a header that comes before it (not included in container) */
+.sub-header {
+	padding: 1em;
+    color: #3a948b;
+    background-color: #333;
+    clear: left;
+    text-align: center;
+    border-top: 1px solid #3a948b;
+		    border-bottom: 1px solid #3a948b;
+    font-size: 1.2em;
+    box-shadow: .5em .5em 1em #111;
+    letter-spacing: 1em;
+    color: #fff;
+    margin-bottom: 2%;
+}
+
+#container {
+	height: auto;
+	margin: 5vw;
+	padding-bottom: 5vw;
+	overflow: hidden;
+	line-height: 2;
+	width: 100%
+	height: 100%;
+}
+
+/*----------END CONTAINERS----------/*
+
+
+/*----------MEDIA QUERIES----------*/
+@media screen and (max-width: 500px) {
+	/*-----CHANGE NAV-----*/
+	nav {
+	/* Make sure the nav is fixed at the top left */
+	position: fixed;
+	/* Make sure the nav is above all content */
+	z-index: 1000;
+	/* Set top and bottom to 0 to make sure the nav takes all the height from top to bottom */
+	top: 0;
+	bottom: 0;
+	background-color: #222;
+	width: 200px;
+	height: 100%;
+	box-shadow: .5em 0 1em #111;
+	transform: translate3d(-200px, 0, 0);
+	transition: transform 0.4s ease;
+}
+
+nav ul {
+    list-style: none;
+    margin-top: 2vw;
+    padding: 0;
+    color: #fff;
+}
+
+/*-----List items in nav, aka nav icons/buttons-----*/
+nav ul li {
+	/* Give some space between the buttons */
+	padding-top: 2%;
+	/* Center align all of the nav list items */
+	text-align: center;
+	margin: 0;
+}
+
+/*-----Text under icons/buttons in nav-----*/
+nav ul li p {
+	font-family: 'Open Sans Condensed', serif;
+	/* Display them block so they take up the full width */
+	display: block;
+	color: #fff;
+	font-size: 1em;
+	/* Hide them until the user hovers over the nav icon/button */
+	text-align: center;
+	margin: 0;
+}
+
+/* Toggle button to slide nav over */
+.nav-toggle-btn {
+	display: block;
+	position: absolute;
+	width: auto;
+ 	max-width: 25%;
+  	height: auto;
+  	max-height: 25%;
+	left: 100%;
+	top: 2vw;
+}
+
+.active-nav nav {
+	transform: translate3d(0, 0, 0);
+}
+
+.content {
+	margin: 2%;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	transition: transform 0.4s ease;
+}
+
+.active-nav .content {
+	transform: translate3d(200px, 0, 0);
+}
+
+.icon {
+	font-size: 8vw;
+}
+}
+/*----------END MEDIA QUERIES----------*/
