@@ -733,4 +733,18 @@ MEDIA QUERIES
     .skills p {
       font-size: .8em;
     }
+    .contact-info-container {
+      font-size: inherit;
+      flex-direction: column;
+      text-align: center;
+    }
+    .contact-info-container div {
+      margin: 0 auto;
+    }
+    .contact-info-container i {
+      font-size: 1.8em;
+      line-height: 1.2em;
+      padding-right: 3%;
+    }
+
 }
