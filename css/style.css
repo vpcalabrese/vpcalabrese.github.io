@@ -13,6 +13,10 @@ h1 {
   font-size: 2.5vw;
 }
 
+section {
+  padding: 3%;
+}
+
 /* -------------------------------------------------------------
 PAGE LOADER
 ------------------------------------------------------------- */
@@ -406,6 +410,19 @@ Without covering layers behind it, uneven layers would appear out of place. Can 
   font-family: 'Arvo', cursive;
 }
 
+
+#presentations {
+  background-color: #777;
+  color: white;
+  font-family: 'Arvo', sans-serif;
+  font-size: inherit;
+}
+
+#presentations p {
+  padding-bottom: 3%;
+}
+
+
 /* -------------------------------------------------------------
 ABOUT SECTION
 ------------------------------------------------------------- */
@@ -417,7 +434,7 @@ ABOUT SECTION
   text-align: left;
   text-indent: 6%;
   color: #D5D5C5;
-    padding-bottom: 6%;
+  padding-bottom: 6%;
 }
 
 #about h1 {
@@ -551,7 +568,6 @@ PROJECTS SECTION
   background-color: #444;
   color: white;
   font-family: 'Arvo', sans-serif;
-  padding: 3% 6% 6% 6%;
   font-size: inherit;
 }
 
@@ -634,7 +650,6 @@ CONTACT SECTION
   display: block;
   text-align: center;
   color: black;
-  padding: 3% 6% 6% 6%;
 }
 
 .contact-info-container {
@@ -748,3 +763,51 @@ MEDIA QUERIES
     }
 
 }
+
+
+
+
+
+
+.photo-grid {
+			margin: 0 auto;
+			height: auto;
+			width: 100%;
+		}
+
+
+		.photo-grid ul {
+		  font-size:0;
+		  list-style:none;
+		  width:100%;
+		  /* Necessary. Takes away space that appears to left of ul list. */
+		  padding: 0;
+		}
+
+		.photo-grid li {
+		    display: inline-block;
+		    width:33.3%;
+		}
+
+		.photo-grid img {
+		  width:100%;
+		}
+
+		.photo-grid .feature {
+		  float:left;
+		  width:66.6%;
+		}
+
+		.photo-grid .panorama {
+			width: 100%;
+		}
+
+		@media (max-width: 640px) {
+		  .photo-grid li {
+		      width:100%;
+		  }
+
+		  .photo-grid .feature {
+		    width:100%;
+		  }
+		}
