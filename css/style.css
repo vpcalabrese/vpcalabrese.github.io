@@ -1,11 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Arvo');
 @import url('https://fonts.googleapis.com/css?family=Pacifico');
-
 html, body {
   background-color: #444;
   margin: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 h1 {
@@ -234,14 +233,15 @@ NAV BAR
 }
 
 /* Contact link is bigger word so make it take up more space (this way it appears centered) */
-.flex-item:last-child{
+
+.flex-item:last-child {
   flex-grow: 1.1;
 }
 
 .flex-item a {
-    /* Remove underline from links */
+  /* Remove underline from links */
   text-decoration: none;
-    /* Inherit the text color since by default links are blue*/
+  /* Inherit the text color since by default links are blue*/
   color: inherit;
 }
 
@@ -253,8 +253,8 @@ NAV BAR
   text-transform: uppercase;
   /* Rotate the text so it matches the rothation of my name in the intro below the nav */
   -webkit-transform: rotate(-6eg);
-      -ms-transform: rotate(-6deg);
-          transform: rotate(-6deg);
+  -ms-transform: rotate(-6deg);
+  transform: rotate(-6deg);
 }
 
 @media only screen and (max-width:37.5em) {
@@ -279,7 +279,7 @@ NAV BAR
   .parallax {
     overflow-x: auto;
     overflow-y: hidden;
-}
+  }
 }
 
 /* -------------------------------------------------------------
@@ -316,7 +316,7 @@ INTRO (MULTILAYERED PARALLAX SCROLLING)
   height: 100%;
   text-align: center;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   margin: 0 auto;
 }
 
@@ -375,7 +375,7 @@ Without covering layers behind it, uneven layers would appear out of place. Can 
 .parallax__layer__5 {
   -webkit-transform: translateZ(0px) scale(1);
   transform: translateZ(0px) scale(1);
-    -webkit-transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
 }
 
 .name {
@@ -386,8 +386,8 @@ Without covering layers behind it, uneven layers would appear out of place. Can 
   /* Next two lines moves name down from top and rotates it in line with mountains */
   top: 50%;
   -webkit-transform: translateY(175%) rotate(-2deg);
-      -ms-transform: translateY(175%) rotate(-2deg);
-          transform: translateY(175%) rotate(-2deg);
+  -ms-transform: translateY(175%) rotate(-2deg);
+  transform: translateY(175%) rotate(-2deg);
   font-size: 8vw;
   margin: 0 auto;
   text-align: center;
@@ -402,14 +402,13 @@ Without covering layers behind it, uneven layers would appear out of place. Can 
   /* Next two lines moves name down from top and rotates it in line with mountains */
   top: 50%;
   -webkit-transform: translateY(600%) rotate(-2deg);
-      -ms-transform: translateY(600%) rotate(-2deg);
-          transform: translateY(600%) rotate(-2deg);
+  -ms-transform: translateY(600%) rotate(-2deg);
+  transform: translateY(600%) rotate(-2deg);
   font-size: 3vw;
   margin: 0 auto;
   text-align: center;
   font-family: 'Arvo', cursive;
 }
-
 
 #presentations {
   background-color: #777;
@@ -421,7 +420,6 @@ Without covering layers behind it, uneven layers would appear out of place. Can 
 #presentations p {
   padding-bottom: 3%;
 }
-
 
 /* -------------------------------------------------------------
 ABOUT SECTION
@@ -463,14 +461,14 @@ ABOUT SECTION
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .btn:hover {
@@ -576,7 +574,7 @@ PROJECTS SECTION
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .flex-link {
@@ -596,11 +594,9 @@ PROJECTS SECTION
   .flex-link {
     width: calc(25% - 6px);
   }
-
   .flex-link:nth-of-type(2n) {
     margin-right: 8px;
   }
-
   .flex-link:nth-of-type(4n) {
     margin-right: 0;
   }
@@ -608,8 +604,8 @@ PROJECTS SECTION
 
 .flex-link:hover img {
   -webkit-transform: scale(1.15);
-      -ms-transform: scale(1.15);
-          transform: scale(1.15);
+  -ms-transform: scale(1.15);
+  transform: scale(1.15);
 }
 
 figure {
@@ -675,6 +671,10 @@ CONTACT SECTION
   color: inherit;
 }
 
+#photography {
+  color: #fff;
+}
+
 /* -------------------------------------------------------------
 MEDIA QUERIES
 @media (min-width:320px) { smartphones, portrait iPhone, portrait 480x320 phones (Android) }
@@ -689,18 +689,16 @@ MEDIA QUERIES
   html, body {
     -webkit-overflow-scrolling: touch;
   }
-
   .name {
     -webkit-transform: translateZ(-230px) scale(1);
     /* Moves name just above layer0 in the parallax stack */
     transform: translateZ(-230px) scale(1);
     /* Next two lines moves name down from top and rotates it in line with mountains */
     -webkit-transform: translateY(400%) rotate(-2deg);
-        -ms-transform: translateY(400%) rotate(-2deg);
-            transform: translateY(400%) rotate(-2deg);
+    -ms-transform: translateY(400%) rotate(-2deg);
+    transform: translateY(400%) rotate(-2deg);
     font-size: 10vw;
   }
-
   .purpose {
     color: #D5D5C5;
     /* Moves name just above layer0 in the parallax stack */
@@ -708,106 +706,98 @@ MEDIA QUERIES
     transform: translateZ(-230px) scale(1);
     /* Next two lines moves name down from top and rotates it in line with mountains */
     -webkit-transform: translateY(1250%) rotate(-2deg);
-        -ms-transform: translateY(1250%) rotate(-2deg);
-            transform: translateY(1250%) rotate(-2deg);
+    -ms-transform: translateY(1250%) rotate(-2deg);
+    transform: translateY(1250%) rotate(-2deg);
     font-size: 4.5vw;
   }
-    .parallax__cover {
-      height: 300vw;
-    }
-    h1 {
-        font-size: 1.5em;
-    }
-    #about p {
-      font-size: .8em;
-      padding: 2%;
-    }
-    #projects {
-      text-align: center;
-    }
-    .btn-container {
-      margin-top: 12%;
-      margin-bottom: 24%;
-    }
-    .btn {
-      font-size: 1em;
-      width: 60vw;
-      height: 10vw;
-      border-radius: 50px;
-      color: #D5D5C5;
-    }
-    .image-grid {
-      display: inline-block;
-      text-align: center;
-      margin: 0 auto;
-    }
-    .flex-link {
-      display: inline-block;
-      width: 90%;
-      text-align: center;
-    }
-    .skills p {
-      font-size: .8em;
-    }
-    .contact-info-container {
-      font-size: 1em;
-      flex-direction: column;
-      text-align: center;
-    }
-    .contact-info-container div {
-      margin: 0 auto;
-      text-align: center;
-    }
-    .contact-info-container i {
-      display: none;
-    }
-
+  .parallax__cover {
+    height: 300vw;
+  }
+  h1 {
+    font-size: 1.5em;
+  }
+  #about p {
+    font-size: .8em;
+    padding: 2%;
+  }
+  #projects {
+    text-align: center;
+  }
+  .btn-container {
+    margin-top: 12%;
+    margin-bottom: 24%;
+  }
+  .btn {
+    font-size: 1em;
+    width: 60vw;
+    height: 10vw;
+    border-radius: 50px;
+    color: #D5D5C5;
+  }
+  .image-grid {
+    display: inline-block;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .flex-link {
+    display: inline-block;
+    width: 90%;
+    text-align: center;
+  }
+  .skills p {
+    font-size: .8em;
+  }
+  .contact-info-container {
+    font-size: 1em;
+    flex-direction: column;
+    text-align: center;
+  }
+  .contact-info-container div {
+    margin: 0 auto;
+    text-align: center;
+  }
+  .contact-info-container i {
+    display: none;
+  }
 }
 
-
-
-
-
-
 .photo-grid {
-			margin: 0 auto;
-			height: auto;
-			width: 100%;
-		}
+  margin: 0 auto;
+  height: auto;
+  width: 100%;
+}
 
+.photo-grid ul {
+  font-size: 0;
+  list-style: none;
+  width: 100%;
+  /* Necessary. Takes away space that appears to left of ul list. */
+  padding: 0;
+}
 
-		.photo-grid ul {
-		  font-size:0;
-		  list-style:none;
-		  width:100%;
-		  /* Necessary. Takes away space that appears to left of ul list. */
-		  padding: 0;
-		}
+.photo-grid li {
+  display: inline-block;
+  width: 33.3%;
+}
 
-		.photo-grid li {
-		    display: inline-block;
-		    width:33.3%;
-		}
+.photo-grid img {
+  width: 100%;
+}
 
-		.photo-grid img {
-		  width:100%;
-		}
+.photo-grid .feature {
+  float: left;
+  width: 66.6%;
+}
 
-		.photo-grid .feature {
-		  float:left;
-		  width:66.6%;
-		}
+.photo-grid .panorama {
+  width: 100%;
+}
 
-		.photo-grid .panorama {
-			width: 100%;
-		}
-
-		@media (max-width: 640px) {
-		  .photo-grid li {
-		      width:100%;
-		  }
-
-		  .photo-grid .feature {
-		    width:100%;
-		  }
-		}
+@media (max-width: 640px) {
+  .photo-grid li {
+    width: 100%;
+  }
+  .photo-grid .feature {
+    width: 100%;
+  }
+}
